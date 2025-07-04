@@ -61,9 +61,6 @@
     "apps:deno": "deno run --allow-read --allow-write --allow-run apps/deno/index.ts",
     "apps:web": "http-server -c-1 .",
     "apps:web:mac": "bash -c 'sleep 1 && open http://localhost:8080/apps/web/test1.html' & yarn apps:web",
-    "apps:rn:ios": "cd apps/rn && yarn add ./../.. --force && react-native run-ios",
-    "apps:rn:android": "yarn apps:rn:emulator & cd apps/rn && yarn add ./../.. --force && react-native run-android",
-    "apps:rn:emulator": "emulator -avd \"$(emulator -list-avds | head -n 1)\" & bash -c 'sleep 5 && adb reverse tcp:8080 tcp:8080 && adb reverse tcp:8081 tcp:8081'"
   },
   "main": "cjs/index.js",
   "module": "es/index.js",
@@ -114,7 +111,7 @@
     "ts-jest": "^26.1.0",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
-    "ttypescript": "^1.5.10",
+    "ttypescript": "^1.5.15",
     "typescript": "^3.9.5"
   },
   "license": "MIT",
