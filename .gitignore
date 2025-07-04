@@ -7,6 +7,7 @@ build/
 dist/
 cjs/
 es/
+.idea/
 
 tsBuildInfo.json
 flamegraph.html
