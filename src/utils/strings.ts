@@ -170,13 +170,18 @@ export const parseDate = (dateStr: string): Date | undefined => {
 };
 
 export const findLastMatch = (value: string, regex: RegExp) => {
-  let position = 0;
+  // Create a regex that will match globally but preserve other flags
+  const flags = regex.flags.includes('g') ? regex.flags : regex.flags + 'g';
+  const globalRegex = new RegExp(regex.source, flags);
+
   let lastMatch: RegExpMatchArray | undefined;
-  while (position < value.length) {
-    const match = value.substring(position).match(regex);
-    if (!match) return { match: lastMatch, pos: position };
+  let lastPosition = 0;
+
+  let match;
+  while ((match = globalRegex.exec(value)) !== null) {
     lastMatch = match;
-    position += (match.index ?? 0) + match[0].length;
+    lastPosition = globalRegex.lastIndex;
   }
-  return { match: lastMatch, pos: position };
+
+  return { match: lastMatch, pos: lastPosition };
 };
