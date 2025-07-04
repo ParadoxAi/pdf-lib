@@ -106,10 +106,9 @@
     "ttypescript": "^1.5.15",
     "typescript": "^3.9.5"
   },
-  "overrides": {
-    "downlevel-dts": {
-      "shelljs": "^0.8.5"
-    }
+  "resolutions": {
+    "minimist": "^1.2.6",
+    "shelljs": "^0.8.5"
   },
   "license": "MIT",
   "private": false,
