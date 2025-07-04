@@ -60,7 +60,7 @@
     "apps:node": "ttsc --build apps/node/tsconfig.json && node apps/node-build/index.js",
     "apps:deno": "deno run --allow-read --allow-write --allow-run apps/deno/index.ts",
     "apps:web": "http-server -c-1 .",
-    "apps:web:mac": "bash -c 'sleep 1 && open http://localhost:8080/apps/web/test1.html' & yarn apps:web",
+    "apps:web:mac": "bash -c 'sleep 1 && open http://localhost:8080/apps/web/test1.html' & yarn apps:web"
   },
   "main": "cjs/index.js",
   "module": "es/index.js",
