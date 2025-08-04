@@ -91,7 +91,7 @@
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "@types/node-fetch": "^2.6.7",
+    "@types/node-fetch": "^2.6.13",
     "@types/pako": "^1.0.1",
     "@zerollup/ts-transform-paths": "^1.7.18",
     "downlevel-dts": "^0.11.0",
